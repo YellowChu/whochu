@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -116,7 +118,7 @@ export default function Home() {
 
               <a href="https://chuisoffbeat.vercel.app/" target="_blank">
                 <button className="rounded-lg border-none px-4 py-2 text-md cursor-pointer hover:opacity-85 transition-all" style={{background: "#995d6c", color: "#e0ccd1"}}>
-                  View Project ->
+                  View Project <FontAwesomeIcon icon={faArrowRight} className="text-sm" />
                 </button>
               </a>
             </div>
@@ -138,7 +140,7 @@ export default function Home() {
 
               <a href="https://pyracer.herokuapp.com/" target="_blank">
                 <button className="rounded-lg border-none px-4 py-2 text-md cursor-pointer hover:opacity-85 transition-all" style={{background: "#995d6c", color: "#e0ccd1"}}>
-                  View Project ->
+                  View Project <FontAwesomeIcon icon={faArrowRight} className="text-sm" />
                 </button>
               </a>
             </div>
@@ -146,11 +148,11 @@ export default function Home() {
         </div>
       </PageSection>
 
-      {/* <PageSection>
-        <div className="footer">
-          <div className="socials">
+      <PageSection>
+        <div className="relative" style={{borderTop: "2px solid #8c7444"}}>
+          <div className="absolute -translate-x-2/4 -translate-y-2/4 left-1/2 px-8 py-4 flex gap-8" style={{background: "#18191d"}}>
             <a href="https://www.linkedin.com/in/david-nguyen-b6352b307/" target="_blank">
-              <FontAwesomeIcon icon={faLinkedin} style={{color: "#ffeeca", fontSize: "25px"}} />
+              <FontAwesomeIcon icon={faLinkedin} color="#fff" style={{color: "#ffeeca", fontSize: "25px"}} />
             </a>
 
             <a href="https://github.com/YellowChu" target="_blank">
@@ -160,12 +162,12 @@ export default function Home() {
 
           <div className="flex flex-col items-center justify-center gap-10 pt-20 pb-10 h-full">
             <a href="/test.pdf" download>
-              <button>
+              <button className="border-none rounded-3xl px-8 py-2 text-base font-medium cursor-pointer hover:opacity-85 transition-all" style={{background: "#8c7444", color: "#E0CCD1"}}>
                 Learn More
               </button>
             </a>
 
-            <div className="text-3xl text-center font-light tracking-wider italic" style={{color: "#8c7444"}}>
+            <div className="text-3xl text-center font-light tracking-wider italic xl:text-2xl xs:text-base" style={{color: "#8c7444"}}>
               &#x201E;Thanks for stopping by&#x201C;
               <div className="mt-2">
                 David Nguyen
@@ -173,7 +175,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </PageSection> */}
+      </PageSection>
     </>
   );
 }
