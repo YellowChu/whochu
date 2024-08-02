@@ -14,25 +14,25 @@ export default function Home() {
   return (
     <>
       <PageSection>
-        <div className="h-full mountain-background" style={{height: "70vh"}}>
-          <div className="px-16 flex justify-between items-center h-full">
-            <div className="text-left">
-              <h1 style={{letterSpacing: "-0.5rem"}}>Hi, I am</h1>
-              <h1 style={{color: "#995d6c", letterSpacing: "-1.25rem"}}>David Nguyen</h1>
+        <div className="mountain-background" style={{height: "70vh"}}>
+          <div className="px-16 flex flex-wrap justify-between items-center gap-5 h-full">
+            <div className="text-left lg:flex lg:justify-center lg:w-full lg:mb-24 lg:gap-8 md:flex-col md:items-center">
+              <h1 className="text-9xl -tracking-widest lg:text-8xl xl:text-6xl xl:text-center xs:text-4xl">Hi, I am</h1>
+              <h1 className="text-9xl -tracking-widest lg:text-8xl xl:text-6xl xl:text-center xs:text-4xl" style={{color: "#995d6c"}}>David Nguyen</h1>
             </div>
 
-            <div className="text-right">
-              <h1 style={{color: "#554252", letterSpacing: "-0.7rem"}}>Full stack</h1>
-              <h1 style={{letterSpacing: "-1.1rem"}}>Developer</h1>
+            <div className="text-right lg:flex lg:justify-center lg:w-full lg:gap-8 md:flex-col md:items-center">
+              <h1 className="text-9xl -tracking-widest lg:text-8xl xl:text-6xl xl:text-center xs:text-4xl" style={{color: "#554252"}}>Full stack</h1>
+              <h1 className="text-9xl -tracking-widest lg:text-8xl xl:text-6xl xl:text-center xs:text-4xl">Developer</h1>
             </div>
           </div>
         </div>
       </PageSection>
 
       <PageSection>
-        <div className="p-16" style={{height: "50vh"}}>
+        <div className="p-16">
           <div className="flex h-full gap-20">
-            <div className="text-left flex flex-col justify-center" style={{color: "#fff8ea"}}>
+            <div className="flex flex-col justify-center" style={{color: "#fff8ea"}}>
               <h2 className="tracking-tighter">
                 Looking for&nbsp;
                 <span style={{color: "#d5a419"}}>
@@ -69,7 +69,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="word-cloud h-full w-full">
+            <div className="word-cloud h-full w-full" style={{height: "50vh"}}>
               <div className="word word1" style={{color: "#b4aa99"}}>TypeScript</div>
               <div className="word word2" style={{color: "#8c7444"}}>Python</div>
               <div className="word word3" style={{color: "#8c7444"}}>CSS</div>
