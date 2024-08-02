@@ -1,19 +1,35 @@
 "use client";
 
+import React, { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
+gsap.registerPlugin(useGSAP);
+
+
 export default function Home() {
+  const container = useRef(null);
+  
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.fromTo('div[data-gsap="hero-section-1"]', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.3 })
+      .fromTo('div[data-gsap="hero-section-2"]', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.3 })
+      .fromTo('div[data-gsap="skill-section"], div[data-gsap="project-section', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.3 })
+  }, { scope: container });
+
   return (
-    <>
+    <div ref={container}>
       <div className="mountain-background" style={{height: "70vh"}}>
         <div className="px-16 flex flex-wrap justify-between items-center gap-5 h-full">
-          <div className="text-left lg:flex lg:justify-center lg:w-full lg:mb-24 lg:gap-8 md:flex-col md:items-center md:text-center">
+          <div data-gsap="hero-section-1" className="opacity-0 text-left lg:flex lg:justify-center lg:w-full lg:mb-24 lg:gap-8 md:flex-col md:items-center md:text-center">
             <h1 className="text-9xl -tracking-widest lg:text-8xl xl:text-6xl xl:text-center xs:text-5xl">Hi, I am</h1>
             <h1 className="text-9xl -tracking-widest lg:text-8xl xl:text-6xl xl:text-center xs:text-5xl" style={{color: "#995d6c"}}>David Nguyen</h1>
           </div>
 
-          <div className="text-right lg:flex lg:justify-center lg:w-full lg:gap-8 md:flex-col md:items-center">
+          <div data-gsap="hero-section-2" className="opacity-0 text-right lg:flex lg:justify-center lg:w-full lg:gap-8 md:flex-col md:items-center">
             <h1 className="text-9xl -tracking-widest lg:text-8xl xl:text-6xl xl:text-center xs:text-5xl" style={{color: "#554252"}}>Full stack</h1>
             <h1 className="text-9xl -tracking-widest lg:text-8xl xl:text-6xl xl:text-center xs:text-5xl">Developer</h1>
           </div>
@@ -21,7 +37,7 @@ export default function Home() {
       </div>
 
       <div className="flex items-center gap-20 px-16 py-14 lg:flex-wrap" style={{background:"#26262C"}}>
-        <div className="basis-2/5 lg:basis-full lg:flex lg:flex-col lg:items-center lg:w-full lg:text-center">
+        <div data-gsap="skill-section" className="opacity-0 basis-2/5 lg:basis-full lg:flex lg:flex-col lg:items-center lg:w-full lg:text-center">
           <h2 className="text-6xl tracking-tighter md:text-5xl xl:text-4xl">
             Looking for&nbsp;
             <span style={{color: "#d5a419"}}>
@@ -58,7 +74,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="basis-3/5 h-full lg:basis-full" style={{height: "40vh"}}>
+        <div data-gsap="skill-section" className="opacity-0 basis-3/5 h-full lg:basis-full" style={{height: "40vh"}}>
           <div className="relative h-full w-full">
             <div className="absolute -translate-x-2/4 -translate-y-2/4 tracking-tight word1" style={{color: "#b4aa99"}}>TypeScript</div>
             <div className="absolute -translate-x-2/4 -translate-y-2/4 tracking-tight word2" style={{color: "#8c7444"}}>Python</div>
@@ -75,7 +91,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-row-reverse justify-between items-center px-16 py-24 h-full w-full lg:flex-wrap lg:flex-col lg:items-center lg:gap-16">
+      <div data-gsap="project-section" className="opacity-0 flex flex-row-reverse justify-between items-center px-16 py-24 h-full w-full lg:flex-wrap lg:flex-col lg:items-center lg:gap-16">
         <div className="text-right basis-2/5 lg:text-center">
           <h3 className="text-6xl md:text-5xl xl:text-4xl tracking-tight ">
             Personal
@@ -158,6 +174,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
