@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function PageSection({children}: Readonly<{children: React.ReactNode}>) {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
       </PageSection>
 
       <PageSection>
-        <div className="flex items-center gap-20 px-16 py-12 lg:flex-wrap" style={{height: "40vh"}}>
+        <div className="flex items-center gap-20 px-16 py-12 lg:flex-wrap">
           <div className="basis-2/5 lg:basis-full lg:flex lg:flex-col lg:items-center lg:w-full lg:text-center">
             <h2 className="text-6xl tracking-tighter md:text-5xl xl:text-4xl">
               Looking for&nbsp;
@@ -46,29 +47,29 @@ export default function Home() {
             </h3>
 
             <div className="flex flex-wrap tracking-tight text-base gap-2 mt-8 lg:justify-center md:text-sm">
-              <div className="badge" style={{background: "#4e4637"}}>
+              <div className="shadow rounded-3xl px-4 py-2 whitespace-nowrap" style={{background: "#4e4637"}}>
                 5 years of experience
               </div>
 
-              <div className="badge" style={{background: "#4e4637"}}>
+              <div className="shadow rounded-3xl px-4 py-2 whitespace-nowrap" style={{background: "#4e4637"}}>
                 Keen sense for UI/UX
               </div>
 
-              <div className="badge" style={{background: "#4e4637"}}>
+              <div className="shadow rounded-3xl px-4 py-2 whitespace-nowrap" style={{background: "#4e4637"}}>
                 Clean code lover
               </div>
               
-              <div className="badge" style={{background: "#4e4637"}}>
+              <div className="shadow rounded-3xl px-4 py-2 whitespace-nowrap" style={{background: "#4e4637"}}>
                 Degree in Mechatronics
               </div>
 
-              <div className="badge" style={{background: "#4e4637"}}>
+              <div className="shadow rounded-3xl px-4 py-2 whitespace-nowrap" style={{background: "#4e4637"}}>
                 Passion for learning
               </div>
             </div>
           </div>
 
-          <div className="basis-3/5 h-full lg:basis-full">
+          <div className="basis-3/5 h-full lg:basis-full" style={{height: "40vh"}}>
             <div className="relative h-full w-full">
               <div className="absolute -translate-x-2/4 -translate-y-2/4 tracking-tight word1" style={{color: "#b4aa99"}}>TypeScript</div>
               <div className="absolute -translate-x-2/4 -translate-y-2/4 tracking-tight word2" style={{color: "#8c7444"}}>Python</div>
@@ -86,70 +87,66 @@ export default function Home() {
         </div>
       </PageSection>
 
-      {/* <PageSection>
-        <div className="p-16" style={{height: "40vh"}}>
-          <div className="flex justify-between items-center h-full w-full">
-            <div className="flex gap-32">
-              <div className="project-card">
-                <div className="flex items-center gap-4">
-                  <div className="icon">
-                    🎛️
-                  </div>
-
-                  <div className="title">
-                    Off Beat
-                  </div>
-                </div>
-
-                <div className="description mt-4">
-                  Learn how to stay on beat.
-                </div>
-
-                <a href="https://chuisoffbeat.vercel.app/" target="_blank">
-                  <button className="mt-8">
-                    View Project ->
-                  </button>
-                </a>
-              </div>
-
-              <div className="project-card">
-                <div className="flex items-center gap-4">
-                  <div className="icon">
-                    🐍
-                  </div>
-
-                  <div className="title">
-                    PyRacer
-                  </div>
-                </div>
-
-                <div className="description mt-4">
-                  Increase your Python coding speed.
-                </div>
-
-                <a href="https://pyracer.herokuapp.com/" target="_blank">
-                  <button className="mt-8">
-                    View Project ->
-                  </button>
-                </a>
-              </div>
-            </div>
-
-            <div className="text-right">
-              <h3>
-                Personal
-              </h3>
-              <h2 style={{letterSpacing: "-0.2rem", fontWeight: 500, color: "#995d6c"}}>
-                Projects
-              </h2>
-            </div>
+      <PageSection>
+        <div className="flex flex-row-reverse justify-between items-center p-16 h-full w-full lg:flex-wrap lg:flex-col lg:items-center lg:gap-16">
+          <div className="text-right basis-2/5 lg:text-center">
+            <h3 className="text-6xl md:text-5xl xl:text-4xl tracking-tight ">
+              Personal
+            </h3>
+            <h2 className="text-8xl font-medium xl:text-6xl tracking-tight mt-6" style={{color: "#995d6c"}}>
+              Projects
+            </h2>
           </div>
 
+          <div className="basis-3/5 flex gap-16 lg:flex-wrap lg:justify-center">
+            <div className="shadow rounded-2xl p-8 text-left w-96 xl:w-60" style={{background: "#1f1e24", color: "#686378"}}>
+              <div className="flex items-center gap-4">
+                <div className="text-4xl">
+                  🎛️
+                </div>
 
+                <div className="text-2xl font-semibold tracking-wider" style={{color: "#995d6c"}}>
+                  Off Beat
+                </div>
+              </div>
+
+              <div className="mt-4 mb-12">
+                Learn how to stay on beat.
+              </div>
+
+              <a href="https://chuisoffbeat.vercel.app/" target="_blank">
+                <button className="rounded-lg border-none px-4 py-2 text-md cursor-pointer hover:opacity-85 transition-all" style={{background: "#995d6c", color: "#e0ccd1"}}>
+                  View Project ->
+                </button>
+              </a>
+            </div>
+
+            <div className="shadow rounded-2xl p-8 text-left w-96 xl:w-60" style={{background: "#1f1e24", color: "#686378"}}>
+              <div className="flex items-center gap-4">
+                <div className="text-4xl">
+                  🐍
+                </div>
+
+                <div className="text-2xl font-semibold tracking-wider" style={{color: "#995d6c"}}>
+                  PyRacer
+                </div>
+              </div>
+
+              <div className="mt-4 mb-12">
+                Increase your Python coding speed.
+              </div>
+
+              <a href="https://pyracer.herokuapp.com/" target="_blank">
+                <button className="rounded-lg border-none px-4 py-2 text-md cursor-pointer hover:opacity-85 transition-all" style={{background: "#995d6c", color: "#e0ccd1"}}>
+                  View Project ->
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
       </PageSection>
 
-      <PageSection>
+      {/* <PageSection>
         <div className="footer">
           <div className="socials">
             <a href="https://www.linkedin.com/in/david-nguyen-b6352b307/" target="_blank">
