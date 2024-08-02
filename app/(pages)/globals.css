@@ -8,46 +8,28 @@ body {
   background: #18191d;
 }
 
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 2.5rem;
-}
-
 .mountain-background {
   background: url('../../public/background.jpeg') no-repeat center center/cover;
 }
 
-.word-cloud {
-  position: relative;
-}
-.word {
-  position: absolute;
-  letter-spacing: -0.1rem;
-}
-.word1 { font-size: 36px; top: 62%; left: 30%; transform: translate(-50%, -50%); }
-.word2 { font-size: 50px; top: 37%; left: 80%; transform: translate(-50%, -50%); }
-.word3 { font-size: 22px; top: 43%; left: 36%; transform: translate(-50%, -50%); }
-.word4 { font-size: 16px; top: 48%; left: 18%; transform: translate(-50%, -50%); }
-.word5 { font-size: 15px; top: 52%; left: 70%; transform: translate(-50%, -50%); }
-.word6 { font-size: 15px; top: 58%; left: 85%; transform: translate(-50%, -50%); }
-.word7 { font-size: 25px; top: 15%; left: 45%; transform: translate(-50%, -50%); }
-.word8 { font-size: 35px; top: 26%; left: 30%; transform: translate(-50%, -50%); }
-.word9 { font-size: 23px; top: 70%; left: 70%; transform: translate(-50%, -50%); }
-.word10 { font-size: 30px; top: 20%; left: 70%; transform: translate(-50%, -50%); }
-.word11 { font-size: 32px; top: 80%; left: 40%; transform: translate(-50%, -50%); }
-
 .badge {
-  background: #4e4637;
-  color: #fff;
-
   border-radius: 2rem;
   padding: 0.5rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  font-size: 0.9rem;
+  white-space: nowrap;
 }
+
+.word1 { font-size: 36px; top: 62%; left: 30%; }
+.word2 { font-size: 50px; top: 37%; left: 80%; }
+.word3 { font-size: 22px; top: 43%; left: 36%; }
+.word4 { font-size: 16px; top: 48%; left: 18%; }
+.word5 { font-size: 15px; top: 52%; left: 70%; }
+.word6 { font-size: 15px; top: 58%; left: 85%; }
+.word7 { font-size: 25px; top: 15%; left: 45%; }
+.word8 { font-size: 35px; top: 26%; left: 30%; }
+.word9 { font-size: 23px; top: 70%; left: 70%; }
+.word10 { font-size: 30px; top: 20%; left: 70%; }
+.word11 { font-size: 32px; top: 80%; left: 40%; }
 
 .project-card {
   background: #1f1e24;

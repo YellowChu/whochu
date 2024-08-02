@@ -17,7 +17,7 @@ const config: Config = {
     screens: {
       "lg": {"max": "1365px"},
       "md": {"max": "965px"},
-      "xl": {"max": "650px"},
+      "xl": {"max": "670px"},
       "xs": {"max": "375px"},
     }
   },
