@@ -160,11 +160,11 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-10 pt-20 pb-10 h-full">
-          <a href="/test.pdf" download>
+          {/* <a href="/test.pdf" download>
             <button className="border-none rounded-3xl px-8 py-2 text-base font-medium cursor-pointer hover:opacity-85 transition-all" style={{background: "#8c7444", color: "#E0CCD1"}}>
               Learn More
             </button>
-          </a>
+          </a> */}
 
           <div className="text-3xl text-center font-light tracking-wider italic xl:text-2xl xs:text-base" style={{color: "#8c7444"}}>
             &#x201E;Thanks for stopping by&#x201C;
