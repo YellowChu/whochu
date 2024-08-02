@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Poppins, sans-serif;
+  color: #ebebeb;
+  background: #18191d;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+.page-section {
+  height: 80vh;
+}
+
+.mountain-background {
+  background: url('../../public/background.jpeg') no-repeat center center/cover;
+}
+
+.wtf {
+  background: linear-gradient(180deg, hsla(228, 9%, 10%, 1) 0%, hsla(228, 6%, 15%, 1) 10%);
+}
+
+
+.word-cloud {
+  position: relative;
+}
+.word {
+  position: absolute;
+  letter-spacing: -0.1rem;
+}
+.word1 { font-size: 36px; top: 62%; left: 30%; transform: translate(-50%, -50%); }
+.word2 { font-size: 50px; top: 37%; left: 80%; transform: translate(-50%, -50%); }
+.word3 { font-size: 22px; top: 43%; left: 36%; transform: translate(-50%, -50%); }
+.word4 { font-size: 16px; top: 48%; left: 18%; transform: translate(-50%, -50%); }
+.word5 { font-size: 15px; top: 52%; left: 70%; transform: translate(-50%, -50%); }
+.word6 { font-size: 15px; top: 58%; left: 85%; transform: translate(-50%, -50%); }
+.word7 { font-size: 25px; top: 15%; left: 45%; transform: translate(-50%, -50%); }
+.word8 { font-size: 35px; top: 26%; left: 30%; transform: translate(-50%, -50%); }
+.word9 { font-size: 23px; top: 70%; left: 70%; transform: translate(-50%, -50%); }
+.word10 { font-size: 30px; top: 20%; left: 70%; transform: translate(-50%, -50%); }
+.word11 { font-size: 32px; top: 80%; left: 40%; transform: translate(-50%, -50%); }
+
+.badge {
+  background: #4e4637;
+  color: #fff;
+
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  font-size: 0.9rem;
+}
+
+.project-card {
+  background: #1f1e24;
+  color: #686378;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  text-align: left;
+  width: 350px;
+}
+
+.project-card .icon {
+  font-size: 2rem;
+}
+
+.project-card .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.project-card button {
+  background: #995d6c;
+  color: #E0CCD1;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.footer {
+  border-top: 2px solid #8c7444;
+  position: relative;
+}
+
+.footer .socials {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  left: 50%;
+  background: #18191d;
+  padding: 1rem 2rem;
+}
+
+.footer button {
+  background: #8c7444;
+  color: #E0CCD1;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
